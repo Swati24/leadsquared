@@ -39,8 +39,8 @@ module Leadsquared
       url = url_with_service("Lead.Create")
       body = [
         {
-          "Attribute": "EmailAddress",
-          "Value": email
+          "Attribute" => "EmailAddress",
+          "Value" => email
         }
       ]
       body += build_attributes values_hash
@@ -61,12 +61,12 @@ module Leadsquared
       url = url_with_service("Lead.CreateOrUpdate")
       body = [
         {
-          "Attribute": "EmailAddress",
-          "Value": email
+          "Attribute" => "EmailAddress",
+          "Value" => email
         },
         {
-          "Attribute": "SearchBy",
-          "Value": "EmailAddress"
+          "Attribute" => "SearchBy",
+          "Value" => "EmailAddress"
         }
       ]
       body += build_attributes(values_hash)
